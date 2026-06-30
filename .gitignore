@@ -1,0 +1,114 @@
+# =========================
+# Node.js / React
+# =========================
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+build/
+dist/
+frontend/build/
+frontend/dist/
+
+# Cache
+.cache/
+*.pack
+*.log
+
+# =========================
+# Python / Flask
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+backend/venv/
+backend/.venv/
+
+# Python build
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+._*
+.Spotlight-V100
+.Trashes
+
+# =========================
+# Logs & temp files
+# =========================
+*.log
+tmp/
+temp/
+*.tmp
+*.temp
+
+# =========================
+# Testing
+# =========================
+coverage/
+__tests__/
+*.test.js
+*.spec.js
+
+# =========================
+# Images (optional)
+# =========================
+# Uncomment if you don’t want images in repo
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+
+# =========================
+# ML Models (optional - only if large)
+# =========================
+# *.h5
+# *.pt
+# *.pth

@@ -1,0 +1,109 @@
+.resizable-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.resizable-panel:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.resize-handle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: ew-resize;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.resizable-panel:hover .resize-handle {
+  opacity: 1;
+}
+
+.resize-line {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, 
+    transparent, 
+    #3b82f6 20%, 
+    #3b82f6 80%, 
+    transparent
+  );
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.resize-handle:hover .resize-line {
+  background: linear-gradient(to bottom, 
+    transparent, 
+    #2563eb 20%, 
+    #2563eb 80%, 
+    transparent
+  );
+  height: 60px;
+}
+
+.panel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 8px; /* Account for resize handle */
+}
+
+/* Resizing state */
+.resizable-panel.resizing {
+  box-shadow: 0 16px 48px rgba(59, 130, 246, 0.2);
+}
+
+.resizable-panel.resizing .resize-line {
+  background: #2563eb;
+  height: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resizable-panel {
+    min-width: 250px;
+    max-width: 100%;
+  }
+  
+  .resize-handle {
+    opacity: 1;
+    width: 12px;
+  }
+  
+  .resize-line {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resizable-panel {
+    min-width: 200px;
+  }
+  
+  .resize-handle {
+    width: 16px;
+  }
+  
+  .resize-line {
+    height: 60px;
+  }
+}
